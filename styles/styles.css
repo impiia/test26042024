@@ -1,0 +1,944 @@
+body {
+    font-family: 'Merriweather', sans-serif;
+    color: #313131;
+}
+
+/* Header*/
+.header {
+    height: 700px;
+    background-image: url('../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header .container {
+    padding: 26px 20px 0 20px;
+    max-width: 1256px;
+    margin: 0 auto;
+}
+
+.header .logo {
+    margin-bottom: 62px;
+}
+
+.header .content-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 542px) 1fr;
+}
+
+.header .headline {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.header .third-line {
+    text-align: center;
+}
+
+.header .fourth-line {
+    text-align: right;
+}
+
+.header .description {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.description span {
+    display: inline;
+}
+
+.header .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .button {
+    width: 263px;
+    height: 72px;
+    border-radius: 66px;
+    border: none;
+    font-family: 'Golos Text';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    margin-right: 16px;
+
+}
+
+.header .button span {
+    display: block;
+}
+
+.header .button:last-child {
+    margin-right: 0;
+}
+
+.header .button--dark {
+    background-color: #1F1F1F;
+    color: #fff;
+}
+
+.header .button--transparent {
+    background-color: transparent;
+    border: 2px solid #1F1F1F;
+    color: #1F1F1F;
+}
+
+.header .button--dark:hover {
+    background-color: #FBCE51;
+    color: #1F1F1F;
+}
+
+.header .button--transparent:hover {
+    background-color: #1F1F1F;
+    border: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 774px;
+        background-position-y: 0;
+        background-position-x: 67%;
+        background-image: url("../assets/images/background-mobile.jpg");
+    }
+
+    .header .container {
+        padding-top: 18px;
+    }
+
+    .header .content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header .logo {
+        height: 32px;
+        margin-bottom: 40px;
+    }
+
+    .header .headline {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .header .buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 32px;
+    }
+
+    .header .description {
+        text-align: left;
+        display: inline;
+        white-space: normal;
+    }
+
+    .header .button {
+        width: 100%;
+        max-height: 47px;
+        margin-bottom: 14px;
+    }
+
+    .header .button:last-child {
+        margin-bottom: 0;
+    }
+
+    .header .button span {
+        display: inline;
+    }
+
+    .header .button--transparent {
+        background-color: white;
+        opacity: 0.9;
+        border: none;
+        color: #1F1F1F;
+    }
+
+}
+
+/* Header end */
+
+/* Line */
+.line {
+    height: 60px;
+    background-color: #F54932;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: 400;
+    font-size: 22px;
+    text-transform: uppercase;
+    align-items: center;
+    overflow: hidden;
+}
+
+.runningText {
+    display: flex;
+    animation: runningText 30s linear infinite;
+}
+
+.line p {
+    margin-left: 12px;
+    display: inline;
+    white-space: nowrap;
+
+}
+
+.line p::after {
+    margin-left: 12px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+    .line {
+        height: 38px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+/* End of Line */
+
+/* Info */
+.info {
+    max-width: 1256px;
+    padding: 0 20px;
+    margin: 80px auto 203px auto;
+}
+
+.info .info-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    margin-bottom: 64px;
+    align-items: center;
+}
+
+.info__players-image {
+    border-radius: 50%;
+}
+
+.info .uppercase-heading {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 135%;
+    color: #313131;
+    text-transform: uppercase;
+}
+
+.info .red-text {
+    font-weight: 700;
+    color: #F54932;
+}
+
+.info .schedule {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+}
+
+.info .image-container {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / 6;
+    position: relative;
+}
+
+.info .chess-collage {
+    position: absolute;
+    top: -50px;
+}
+
+.info .schedule .subtitle {
+    grid-column: 6 / 13;
+    margin-bottom: 60px;
+}
+
+.info .price-container {
+    grid-column: 6 / 13;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    border-collapse: collapse;
+    font-family: 'Golos Text';
+    font-size: 20px;
+    line-height: 120%;
+    color: #313131;
+    margin-bottom: 50px;
+}
+
+.info .table-text--regular {
+    padding-top: 15px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    opacity: 0.7;
+    border-bottom: 2px solid #D0D0D0;
+}
+
+.info .table-text--bold {
+    padding-top: 15px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #D0D0D0;
+    border-left: 2px solid #D0D0D0;
+    padding-left: 15px;
+}
+
+.info .table-first-line {
+    padding-top: 0px;
+}
+
+.info .table-last-line {
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+.info .table-line {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    min-height: 56px;
+}
+
+.info .table-line .fifty-cents {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    margin-right: 15px;
+}
+
+.info .text-row {
+    grid-column: 6 / 13;
+}
+
+.text--blue {
+    font-family: 'Golos Text';
+    font-weight: 400;
+    font-size: 20px;
+    color: #3057A2;
+    text-transform: none;
+}
+
+@media screen and (max-width: 768px) {
+    .info .info-container {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    .info .info-container h2 {
+        display: grid;
+        grid-template-rows: 1fr 450px auto auto;
+    }
+
+    .info .subtitle-2 {
+        grid-row: 3/4;
+    }
+
+    .info .subtitle-3 {
+        grid-row: 4/5;
+    }
+
+    .info .uppercase-heading {
+        font-size: 28px;
+    }
+
+    .red-text {
+        font-size: 28px;
+    }
+
+    .info {
+        max-width: 1222px;
+        margin: 48px auto 120px auto;
+    }
+
+    .info__players-image {
+        max-width: 100%;
+        margin: 24px 0;
+        position: absolute;
+        top: 151px;
+    }
+
+    .info .schedule {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info .info-container {
+        margin-bottom: 24px;
+    }
+
+    .info .image-container {
+        transform: translateX(15px);
+        margin-bottom: 12px;
+    }
+
+    .info .chess-collage {
+        position: initial;
+        width: 110%;
+    }
+
+    .info .schedule .subtitle {
+        margin-bottom: 44px;
+    }
+
+    .info .price-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 24px;
+    }
+
+    .info .table-text--regular {
+        border-bottom: none;
+    }
+
+    .info .table-text--regular:nth-last-child(-n+2) {
+        padding-bottom: 13px;
+    }
+
+    .info .table-text--bold {
+        padding-top: 0;
+        font-weight: 600;
+        padding-bottom: 13px;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .info .table-line {
+        padding-top: 13px;
+        border-bottom: 2px solid #D0D0D0;
+        padding-bottom: 13px;
+        display: initial;
+        grid-column: auto;
+    }
+
+    .info .text-row {
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    .info .table-line .fifty-cents {
+        border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .info .info-container h2 {
+        grid-template-rows: 1fr 263px auto auto;
+    }
+}
+
+/* End of Schedule */
+
+/* Stages */
+.stages {
+    max-width: 1256px;
+    padding: 0 20px;
+    margin: 80px auto 200px auto;
+}
+
+.stages .subtitle {
+    position: relative;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #313131;
+    margin-bottom: 54px;
+}
+
+.stages .text--small {
+    position: absolute;
+    inline-size: fit-content;
+    line-height: 120%;
+    top: 72px;
+    left: 300px;
+}
+
+#slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    position: relative;
+}
+
+.stage-1-2 {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.stage-3 {
+    grid-column: 3 / 4;
+    grid-row: 1/3;
+}
+
+.stage-4-5 {
+    grid-column: 1 / 3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.stage-6 {
+    grid-column: 1 / 2;
+    grid-row: 3/4;
+}
+
+.stage-7 {
+    grid-column: 2 / 4;
+    grid-row: 3/4;
+}
+
+.image-container {
+    position: relative;
+}
+
+.plane-image {
+    position: absolute;
+    bottom: -403px;
+    right: -66px;
+    z-index: 1;
+}
+
+.stages .stages-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    position: relative;
+}
+
+.stages .stages-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -62px;
+    width: 400px;
+    height: 250px;
+    background-image: url('../assets/images/plane.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.stages .cell {
+    background-image: url('../assets/images/bg-stages.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 112px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.stages .cell-number {
+    min-width: 36px;
+    height: 36px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+
+    font-family: 'Golos Text';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.stages .cell-text {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #313131;
+}
+
+.stages .buttons {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .stages {
+        margin-bottom: 120px;
+    }
+
+    .stages .subtitle {
+        font-size: 36px;
+        line-height: 110%;
+        margin-bottom: 148px;
+    }
+
+    .stages .text--small {
+        position: initial;
+        display: block;
+        line-height: 120%;
+        margin-top: 12px;
+        font-size: 18px;
+    }
+
+    .stages .stages-container {
+        display: flex;
+        flex-direction: row;
+        row-gap: 0;
+        width: 100%;
+    }
+
+    #slider-container {
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 28px;
+        background-image: url('../assets/images/bg-stages.jpg');
+    }
+
+    .stage-1-2,
+    .stage-3,
+    .stage-4-5,
+    .stage-6,
+    .stage-7 {
+        display: block;
+    }
+
+    .stages .cell {
+        padding: 18px;
+    }
+
+    #slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        column-gap: 0;
+        row-gap: 0;
+        align-items: center;
+    }
+
+    .stage-slide {
+        min-width: 100%;
+        min-height: 300px;
+        padding: 45px 0 0 0;
+    }
+
+    .part--one {
+        padding-top: 62px;
+        padding-bottom: 28px;
+    }
+
+    .cell-number {
+        min-width: 36px;
+        height: 36px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        font-family: 'Golos Text';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .stages .cell-text {
+        font-family: 'Golos Text';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #313131;
+        text-align: left;
+    }
+
+    .cell {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .plane-image {
+        position: absolute;
+        top: -138px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 100%;
+    }
+
+    .stages .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons .round-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .buttons img {
+        margin: 0 16px;
+    }
+}
+
+/* End of Stages */
+
+/* Players */
+.players {
+    max-width: 1256px;
+    padding: 0 20px;
+    margin: 0 auto 140px auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 60px;
+}
+
+.players .subtitle {
+    position: relative;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #313131;
+}
+
+.slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-btn:hover {
+    background-color: #FBCE51;
+}
+
+.round-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #D6D6D6;
+}
+
+.round-btn--left-arrow {
+    transform: translate(-2px, 0);
+}
+
+.round-btn--right-arrow {
+    transform: translate(2px, 0);
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+}
+
+.slide-number {
+    font-family: 'Golos Text';
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 14px;
+}
+
+.players-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    grid-column: 1/3;
+}
+
+.slider-inner {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease;
+}
+
+.player-image-container {
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('../assets/images/bg-player.jpg');
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.player-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player-name {
+    font-family: 'Golos Text';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #313131;
+    margin-bottom: 6px;
+}
+
+.player-title {
+    font-family: 'Golos Text';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #313131;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.players .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-button {
+    padding: 0 12px;
+    border: 1px solid #3057A2;
+    border-radius: 62px;
+    font-family: 'Golos Text';
+    font-weight: 500;
+    font-size: 16px;
+    color: #3057A2;
+    line-height: 120%;
+    min-height: 35px;
+}
+
+.player-button:hover {
+    background-color: #3057A2;
+    color: white;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.player {
+    flex: 0 0 auto;
+    width: 33.33%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .players {
+        margin-bottom: 100px;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .top-container {
+        margin-bottom: 40px;
+    }
+
+    .players .subtitle {
+        font-size: 36px;
+    }
+
+    .players .slider-btn {
+        display: none;
+    }
+
+    .player {
+        width: 100%;
+    }
+
+    .player-image-container {
+        margin: 0 auto;
+        width: 72%;
+        padding-bottom: 72%;
+        margin-bottom: 28px;
+    }
+
+    .player-image {
+        height: 95%;
+    }
+
+    .players .buttons {
+        grid-row: 3/4;
+    }
+}
+
+
+/* End of Players */
+
+/* Footer */
+.footer {
+    background-image: url("../assets/images/bg-footer.jpg");
+}
+
+.footer__container {
+    max-width: 1256px;
+    padding: 0 20px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 72px;
+    font-family: 'Golos Text';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #313131;
+    opacity: 0.6;
+}
+
+/* End of Footer */
